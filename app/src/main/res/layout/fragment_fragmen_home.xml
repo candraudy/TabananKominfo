@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmenHome">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello, "
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/hello">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/hello"
+            android:text="Candra!"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <ImageView
+            android:layout_marginRight="20dp"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:src="@drawable/akun"
+            android:layout_alignParentRight="true">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="380dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="70dp"
+        app:cardElevation="30dp"
+        app:cardCornerRadius="30dp"
+        android:backgroundTint="@color/purple_200"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.7"
+                android:scaleType="fitXY"
+                android:src="@drawable/ulundanu"></ImageView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selamat Pagi"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold">
+        </TextView>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/card_view">
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OBJEK WISATA TABANAN"
+            android:textColor="@color/black"
+            android:layout_marginStart="15dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp">
+
+        </TextView>
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvhome">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
